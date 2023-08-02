@@ -1,38 +1,3 @@
-// import React, { useState } from "react";
-
-// export default function CalculateAge() {
-//   const { date, setDate } = useState("");
-
-//   handleChange = () => {
-//     // const birthDateInput = document.getElementById("birthDate").value;
-//     const birthDate = new Date(birthDate);
-//     const currentDate = new Date();
-
-//     const ageInMilliseconds = currentDate - birthDate;
-//     const ageDate = new Date(ageInMilliseconds);
-//     const ageYear = ageDate.getUTCFullYear() - 1970;
-//     const ageMonth = ageDate.getUTCMonth();
-//     const ageDay = ageDate.getUTCDate() - 1;
-//     setDate(() => {
-//       date: ageDay;
-//     });
-//   };
-
-//   return (
-//     <div className="container">
-//       <h1 className="title">Age Calculator</h1>
-//       <p className="subtitle">
-//         Tract Your Life's Progress: Age in Years, Months, and Days!
-//       </p>
-//       <input type="date" id="date" htmlFor="birthDate" className="date-input" />
-//       <button className="age-btn" onClick={handleChange}>
-//         Calculate Age
-//       </button>
-//       <h1>{date}</h1>
-//     </div>
-//   );
-// }
-
 import React, { useState } from "react";
 
 export default function CalculateAge() {
