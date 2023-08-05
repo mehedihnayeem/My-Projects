@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.container {
+  display: flex;
+}
+
+.main-container {
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 30px;
+  padding-left: 0px;
+  margin: auto;
+}
+
+.logo img {
+  width: 120px;
+  padding-top: 8px;
+  height: auto;
+}
+
+.search-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-box input {
+  padding: 10px 20px;
+  border: 0.5px solid #ccc;
+  min-width: 500px;
+  border-top-left-radius: 18px;
+  border-bottom-left-radius: 18px;
+}
+
+.search {
+  background: #e1e1e1;
+  border: none;
+  padding: 6px 10px;
+  padding-right: 18px;
+  border-top-right-radius: 18px;
+  border-bottom-right-radius: 18px;
+  margin-right: 9px;
+}
+
+.search-btn {
+  width: 20px;
+}
+
+.mic {
+  background: #eceaea;
+  padding: 7px 10px;
+  padding-bottom: 5px;
+  border-radius: 50%;
+}
+
+.nav-side {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  gap: 15px;
+}
+
+.nav-side img {
+  width: 40px;
+  height: auto;
+}
+
+.avater-img {
+  width: 20px;
+  height: auto;
+  border-radius: 60%;
+}
+
+.bar {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.bar-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.bar-icon h4 {
+  font-weight: 300;
+  font-size: 13px;
+  margin-top: -7px;
+}
+
+hr {
+  margin-top: 15px;
+  border: 1px solid #e2e2e2;
+}
+
+.tags {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  margin-left: 30px;
+}
+
+.tag {
+  padding: 5px 10px;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 15px;
+  border: 1px solid #a7a7a7;
+  background: #eee;
+}
+
+.dark {
+  background: #333;
+  color: #fff;
+}
+
+.cards {
+  display: grid;
+  padding: 30px;
+  padding-top: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.card {
+  padding-top: 20px;
+}
+
+.card img {
+  width: 280px;
+  border-radius: 15px;
+}
+
+.card-info {
+  display: flex;
+  gap: 10px;
+  font-weight: 300;
+}
+
+.card-info img {
+  width: 40px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.card-text h1 {
+  font-size: 16px;
+  max-width: 240px;
+}
