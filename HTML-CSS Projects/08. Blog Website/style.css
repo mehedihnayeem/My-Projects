@@ -11,16 +11,19 @@ body {
   font-family: "Inter", sans-serif;
   font-weight: 400;
   line-height: 1.4;
+  max-width: 1200px;
+  margin: auto;
 }
 
 header {
   position: sticky;
   top: 0;
+  z-index: 100;
+  background: #fff;
 }
 
 nav {
   padding: 20px;
-  max-width: 1200px;
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
@@ -55,12 +58,23 @@ nav ul li a {
 }
 
 .hero h1 {
-  font-size: 55px;
-  width: 300px;
+  padding-left: 50px;
+  font-size: 65px;
 }
 
 .hero p {
+  padding-left: 50px;
   margin-top: 10px;
   color: #4a5568;
   font-size: 25px;
+}
+
+.hero img {
+  border-radius: 50px;
+}
+
+.long-card {
+  margin-top: 50px;
+  display: flex;
+  border: 1px solid #999;
 }
