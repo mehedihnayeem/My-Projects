@@ -74,7 +74,176 @@ nav ul li a {
 }
 
 .long-card {
-  margin-top: 50px;
+  margin-top: 90px;
+  margin-bottom: 90px;
+  padding-right: 70px;
   display: flex;
   border: 1px solid #999;
+  gap: 10px;
+  border-radius: 5px;
+  border: 1px solid #e2e2e2;
+  background: #fff;
+  box-shadow: 0px 5px 4px 0px rgba(221, 221, 221, 0.25);
+}
+
+.long-card img {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  height: 100%;
+}
+
+.card-text {
+  padding: 50px;
+}
+
+.card-text h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.card-text p {
+  color: #718096;
+}
+
+.status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.post-link {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+}
+
+.cards {
+  display: flex;
+  gap: 50px;
+  margin-bottom: 60px;
+}
+
+.card {
+  border: 1px solid #999;
+  border-radius: 5px;
+  border: 1px solid #e2e2e2;
+  background: #fff;
+  box-shadow: 0px 5px 4px 0px rgba(221, 221, 221, 0.25);
+}
+
+.card img {
+  width: 100%;
+}
+
+.card .card-text {
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+.card .card-text h2 {
+  font-size: 25px;
+}
+
+.highlight {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #999;
+  border-radius: 5px;
+  border: 1px solid #e2e2e2;
+  background: #f7fafc;
+  box-shadow: 0px 5px 4px 0px rgba(221, 221, 221, 0.25);
+  margin: 90px 0 30px 0;
+}
+
+.highlight h2 {
+  font-size: 50px;
+  width: 80%;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.btn-section {
+  display: flex;
+  justify-content: end;
+  margin-bottom: 60px;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 15px;
+  border-radius: 5px;
+  background: #6b46c1;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.btn {
+  display: flex;
+  gap: 3px;
+  align-items: center;
+}
+
+hr {
+  margin-bottom: 30px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  font-size: 25px;
+}
+
+/* Post Page */
+
+main {
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto;
+  max-width: 800px;
+  align-items: center;
+}
+
+main h1 {
+  margin-top: 10px;
+}
+
+.text-content {
+  text-align: start;
+}
+
+.post-text-content p {
+  margin: 30px 0;
+  color: #718096;
+}
+
+.writer-info {
+  font-weight: 600;
+}
+
+.date {
+  color: #718096;
+  margin-left: 10px;
+  font-weight: 400;
+}
+
+.post-text-content .p-bold {
+  color: #000;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.post-text-content .p-big {
+  color: #000;
+  font-size: 25px;
+  font-weight: 500;
 }
