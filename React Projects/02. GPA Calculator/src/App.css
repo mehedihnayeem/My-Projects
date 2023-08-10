@@ -3,13 +3,14 @@
 body {
   font-family: "Inter", sans-serif;
   font-weight: 400;
+  background: #f8f8f8;
   line-height: 1.4;
 }
 
 .main {
   max-width: 800px;
   margin: auto;
-  background: #f8f8f8;
+  background: #fff;
 }
 
 .nab-bar {
@@ -33,4 +34,34 @@ body {
 .nab-bar h3 {
   font-size: 15px;
   font-weight: 400;
+}
+
+label {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+input,
+option,
+select {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.form-div {
+  margin: auto;
+  padding: 50px;
+}
+
+div {
+  /* margin-top: 10px; */
+}
+
+.subjects {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
 }
