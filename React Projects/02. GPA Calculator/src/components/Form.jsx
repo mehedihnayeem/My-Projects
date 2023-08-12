@@ -1,12 +1,25 @@
 import React, { useState } from "react";
+import CalculateGPA from "./CalculateGPA";
 
 export default function Form() {
   const [data, setData] = useState({
-    subjectOne: "",
-    subjectTwo: "",
-    averageQ: false,
+    averageBtn: false,
     additonalSubject: "",
     group: "",
+    genOne: "",
+    genTwo: "",
+    genThree: "",
+    genFour: "",
+    genFive: "",
+    genSix: "",
+    genSeven: "",
+    groupSubOne: "",
+    groupSubTwo: "",
+    additionSub: "",
+    additionSubOne: "",
+    additionSubOne: "",
+    additionSubNum: "",
+    arr: [],
   });
 
   const handleChange = (e) => {
@@ -21,85 +34,288 @@ export default function Form() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(data);
+    setData((prevData) => ({
+      ...prevData,
+      arr: [
+        genOne.value,
+        genTwo.value,
+        genThree.value,
+        genFour.value,
+        genFive.value,
+        genSix.value,
+        genSeven.value,
+        groupSubOne.value,
+        groupSubTwo.value,
+        additionSubNum.value,
+      ],
+    }));
   };
 
   let gropSubject;
 
   if (data.group === "science") {
     gropSubject = (
-      <div>
+      <>
         <div>
-          <label htmlFor="subjectOne">Physics: </label>
+          <label htmlFor="groupSubOne">Physics </label>
           <input
             type="number"
-            name="subjectOne"
-            id="subjectOne"
+            name="groupSubOne"
+            id="groupSubOne"
+            min={0}
+            max={100}
             onChange={handleChange}
-            value={data.subjectOne}
+            value={data.groupSubOne}
+            required
           />
         </div>
         <div>
-          <label htmlFor="subjectOne">Chemistry: </label>
+          <label htmlFor="groupSubTwo">Chemistry </label>
           <input
             type="number"
-            name="subjectOne"
-            id="subjectOne"
+            name="groupSubTwo"
+            id="groupSubTwo"
+            min={0}
+            max={100}
             onChange={handleChange}
-            value={data.subjectOne}
+            value={data.groupSubTwo}
+            required
           />
         </div>
-      </div>
+      </>
     );
   } else if (data.group === "arts") {
     gropSubject = (
-      <div>
+      <>
         <div>
-          <label htmlFor="subjectOne">Economics: </label>
+          <label htmlFor="groupSubOne">Economics </label>
           <input
             type="number"
-            name="subjectOne"
-            id="subjectOne"
+            name="groupSubOne"
+            id="groupSubOne"
+            min={0}
+            max={100}
             onChange={handleChange}
-            value={data.subjectOne}
+            value={data.groupSubOne}
+            required
           />
         </div>
         <div>
-          <label htmlFor="subjectOne">Geography: </label>
+          <label htmlFor="groupSubTwo">Geography </label>
           <input
             type="number"
-            name="subjectOne"
-            id="subjectOne"
+            name="groupSubTwo"
+            id="groupSubTwo"
+            min={0}
+            max={100}
             onChange={handleChange}
-            value={data.subjectOne}
+            value={data.groupSubTwo}
+            required
           />
         </div>
-      </div>
+      </>
     );
   } else if (data.group === "commerce") {
     gropSubject = (
-      <div>
+      <>
         <div>
-          <label htmlFor="subjectOne">Finance & Banking: </label>
+          <label htmlFor="groupSubOne">Finance & Banking </label>
           <input
             type="number"
-            name="subjectOne"
-            id="subjectOne"
+            name="groupSubOne"
+            id="groupSubOne"
+            min={0}
+            max={100}
             onChange={handleChange}
-            value={data.subjectOne}
+            value={data.groupSubOne}
+            required
           />
         </div>
         <div>
-          <label htmlFor="subjectOne">Accounting: </label>
+          <label htmlFor="groupSubTwo">Accounting </label>
           <input
             type="number"
-            name="subjectOne"
-            id="subjectOne"
+            name="groupSubTwo"
+            id="groupSubTwo"
+            min={0}
+            max={100}
             onChange={handleChange}
-            value={data.subjectOne}
+            value={data.groupSubTwo}
+            required
           />
         </div>
-      </div>
+      </>
+    );
+  }
+
+  let additionalSubject;
+
+  if (data.group === "science") {
+    additionalSubject = (
+      <>
+        <div className="addition-sub">
+          <fieldset>
+            <legend>Additional Subject</legend>
+            <input
+              type="radio"
+              name="additionSub"
+              id="additionSubOne"
+              value="additionSubOne"
+              checked={data.additionSub === "additionSubOne"}
+              onChange={handleChange}
+              required
+            />
+            <label htmlFor="additionSubOne">Biology</label>
+            {data.additionSub === "additionSubOne" ? (
+              <input
+                type="number"
+                name="additionSubNum"
+                id="additionSubNum"
+                min={0}
+                max={100}
+                onChange={handleChange}
+                value={data.additionSubNum}
+                required
+              />
+            ) : null}
+            <br />
+
+            <input
+              type="radio"
+              name="additionSub"
+              id="additionSubTwo"
+              value="additionSubTwo"
+              checked={data.additionSub === "additionSubTwo"}
+              onChange={handleChange}
+              required
+            />
+            <label htmlFor="additionSubTwo">Higher Math</label>
+            {data.additionSub === "additionSubTwo" ? (
+              <input
+                type="number"
+                name="additionSubNum"
+                id="additionSubNum"
+                min={0}
+                max={100}
+                onChange={handleChange}
+                value={data.additionSubNum}
+                required
+              />
+            ) : null}
+          </fieldset>
+        </div>
+      </>
+    );
+  } else if (data.group === "arts") {
+    additionalSubject = (
+      <>
+        <div className="addition-sub">
+          <fieldset>
+            <legend>Additional Subject</legend>
+            <input
+              type="radio"
+              name="additionSub"
+              id="additionSubOne"
+              value="additionSubOne"
+              checked={data.additionSub === "additionSubOne"}
+              onChange={handleChange}
+              required
+            />
+            <label htmlFor="additionSubOne">Civic & Citizenship</label>
+            {data.additionSub === "additionSubOne" ? (
+              <input
+                type="number"
+                name="additionSubNum"
+                id="additionSubNum"
+                min={0}
+                max={100}
+                onChange={handleChange}
+                value={data.additionSubNum}
+                required
+              />
+            ) : null}
+            <br />
+
+            <input
+              type="radio"
+              name="additionSub"
+              id="additionSubTwo"
+              value="additionSubTwo"
+              checked={data.additionSub === "additionSubTwo"}
+              onChange={handleChange}
+              required
+            />
+            <label htmlFor="additionSubTwo">General Science</label>
+            {data.additionSub === "additionSubTwo" ? (
+              <input
+                type="number"
+                name="additionSubNum"
+                id="additionSubNum"
+                min={0}
+                max={100}
+                onChange={handleChange}
+                value={data.additionSubNum}
+                required
+              />
+            ) : null}
+          </fieldset>
+        </div>
+      </>
+    );
+  } else if (data.group === "commerce") {
+    additionalSubject = (
+      <>
+        <div className="addition-sub">
+          <fieldset>
+            <legend>Additional Subject</legend>
+            <input
+              type="radio"
+              name="additionSub"
+              id="additionSubOne"
+              value="additionSubOne"
+              checked={data.additionSub === "additionSubOne"}
+              onChange={handleChange}
+              required
+            />
+            <label htmlFor="additionSubOne">Business Ent.</label>
+            {data.additionSub === "additionSubOne" ? (
+              <input
+                type="number"
+                name="additionSubNum"
+                id="additionSubNum"
+                min={0}
+                max={100}
+                onChange={handleChange}
+                value={data.additionSubNum}
+              />
+            ) : null}
+            <br />
+
+            <input
+              type="radio"
+              name="additionSub"
+              id="additionSubTwo"
+              value="additionSubTwo"
+              checked={data.additionSub === "additionSubTwo"}
+              onChange={handleChange}
+              required
+            />
+            <label htmlFor="additionSubTwo">General Science</label>
+            {data.additionSub === "additionSubTwo" ? (
+              <input
+                type="number"
+                name="additionSubNum"
+                id="additionSubNum"
+                min={0}
+                max={100}
+                onChange={handleChange}
+                value={data.additionSubNum}
+                required
+              />
+            ) : null}
+          </fieldset>
+        </div>
+      </>
     );
   }
 
@@ -107,7 +323,7 @@ export default function Form() {
     <div>
       <form onSubmit={handleSubmit}>
         <div className="form-div">
-          <div>
+          <div className="group-select">
             <label htmlFor="group">Select Group</label>
             <br />
             <select
@@ -115,6 +331,7 @@ export default function Form() {
               value={data.group}
               onChange={handleChange}
               name="group"
+              required
             >
               <option value="">-- Choose --</option>
               <option value="science">Science</option>
@@ -122,109 +339,119 @@ export default function Form() {
               <option value="commerce">Commerce</option>
             </select>
           </div>
+
           <div className="subjects">
             <div>
-              <label htmlFor="subjectOne">Bangla: </label>
+              <label htmlFor="genOne">Bangla </label>
               <input
                 type="number"
-                name="subjectOne"
-                id="subjectOne"
+                name="genOne"
+                id="genOne"
+                min={0}
+                max={100}
                 onChange={handleChange}
-                value={data.subjectOne}
+                value={data.genOne}
+                required
               />
             </div>
             <div>
-              <label htmlFor="subjectTwo">English: </label>
+              <label htmlFor="genTwo">English </label>
               <input
                 type="number"
-                name="subjectTwo"
-                id="subjectTwo"
+                name="genTwo"
+                id="genTwo"
+                min={0}
+                max={100}
                 onChange={handleChange}
-                value={data.subjectTwo}
+                value={data.genTwo}
+                required
               />
             </div>
             <div>
-              <label htmlFor="subjectThree">Mathematics: </label>
+              <label htmlFor="genThree">Mathematics </label>
               <input
                 type="number"
-                name="subjectThree"
-                id="subjectThree"
+                name="genThree"
+                id="genThree"
+                min={0}
+                max={100}
                 onChange={handleChange}
-                value={data.subjectThree}
+                value={data.genThree}
+                required
               />
             </div>
             <div>
-              <label htmlFor="subjectFour">Religion: </label>
+              <label htmlFor="genFour">Religion </label>
               <input
                 type="number"
-                name="subjectFour"
-                id="subjectFour"
+                name="genFour"
+                id="genFour"
+                min={0}
+                max={100}
                 onChange={handleChange}
-                value={data.subjectFour}
+                value={data.genFour}
+                required
               />
             </div>
             <div>
-              <label htmlFor="subjectFive">Info. & Commu. Technology: </label>
+              <label htmlFor="genFive">Info. & Commu. Technology </label>
               <input
                 type="number"
-                name="subjectFive"
-                id="subjectFive"
+                name="genFive"
+                id="genFive"
+                min={0}
+                max={100}
                 onChange={handleChange}
-                value={data.subjectFive}
+                value={data.genFive}
+                required
               />
             </div>
             <div>
-              <label htmlFor="subjectSix">Physical Studies </label>
+              <label htmlFor="genSix">Physical Studies </label>
               <input
                 type="number"
-                name="subjectSix"
-                id="subjectSix"
+                name="genSix"
+                id="genSix"
+                min={0}
+                max={100}
                 onChange={handleChange}
-                value={data.subjectSix}
+                value={data.genSix}
+                required
+              />
+            </div>
+            <div>
+              <label htmlFor="genSeven">Career Eduaction </label>
+              <input
+                type="number"
+                name="genSeven"
+                id="genSeven"
+                min={0}
+                max={100}
+                onChange={handleChange}
+                value={data.genSeven}
+                required
               />
             </div>
             {gropSubject}
           </div>
 
-          <div>
-            <fieldset>
-              <legend>Additional Subject</legend>
-              <input
-                type="radio"
-                name="additonalSubject"
-                id="additonalSubject"
-                value="biology"
-                checked={data.additonalSubject == "biology"}
-                onChange={handleChange}
-              />
-              <label htmlFor="additonalSubject">Biology</label>
-              <br />
+          {additionalSubject}
 
-              <input
-                type="radio"
-                name="additonalSubject"
-                id="additonalSubject"
-                value="h-math"
-                checked={data.additonalSubject == "h-math"}
-                onChange={handleChange}
-              />
-              <label htmlFor="additonalSubject">Higher Math</label>
-            </fieldset>
-          </div>
-          <div>
+          <div className="average">
             <input
               type="checkbox"
-              name="averageQ"
-              id="averageQ"
+              name="averageBtn"
+              id="averageBtn"
               onChange={handleChange}
-              checked={data.averageQ}
+              checked={data.averageBtn}
             />
-            <label htmlFor="averageQ">English</label>
+            <label htmlFor="averageBtn">Also Calculate Average</label>
           </div>
 
-          <button>Calculate Grade</button>
+          <button className="btn">Calculate Grade</button>
         </div>
       </form>
+      <CalculateGPA numArr={data.arr} averageButton={data.averageBtn} />
     </div>
   );
 }
