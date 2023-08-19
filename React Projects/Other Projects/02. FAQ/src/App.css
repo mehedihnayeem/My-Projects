@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@300;400;500&family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap");
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.main {
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  align-items: center;
+  gap: 1rem;
+}
+
+header {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-section {
+  background: #2d2b2d;
+  display: flex;
+  padding: 1.5em;
+  padding-bottom: 0.8em;
+  font-size: 1.2rem;
+  gap: 1.4em;
+  border-radius: 10px;
+  justify-content: center;
+}
+
+.form-content {
+  display: flex;
+  gap: 1.4em;
+}
+
+.input-div input {
+  width: 20em;
+}
+
+.desc-div-input {
+  height: 4em;
+  margin-top: 0.3em;
+  width: 20em;
+}
+
+button {
+  width: 8em;
+  font-size: 2rem;
+  padding-top: 0.4em;
+  margin: auto;
+}
+
+.card {
+  margin-top: 3em;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.4em;
+}
+
+.card-item {
+  background: #2d2b2d;
+  margin: 0.5em;
+  padding: 1em;
+  border-radius: 5px;
+  margin-top: 2em;
+  width: 30em;
+}
+
+h3 {
+  margin: 0px;
+}
+
+.card-heading {
+  display: flex;
+  justify-content: space-between;
+}
+
+.eye-icon {
+  color: #fff;
+  cursor: pointer;
+}
+
+.icon-btn {
+  background-color: initial;
+  color: initial;
+  border: initial;
+  padding: initial;
+}
